@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentContract xmlns="http://www.ebay.com/2006/v4/content" 
+                xmlns:its="http://www.w3.org/2005/11/its" 
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                version="2.0" 
+                id="userexperienceweb.Invoice" 
+                xsi:schemaLocation="http://www.ebay.com/2006/v4/content ../../schema/V4Content2.xsd">
+                
+    <ContentSpecRef id="com.paypal.infra.web.internal.content.PayPalContentSpec" defaultFamily="InlineContent"/>
+
+	<DynamicFamily name="ReceiptInfo">
+	       <PH ids="merchantName" type="String"/>
+	       <PH ids="merchantAddress1" type="String"/>
+	       <PH ids="merchantAddress2" type="String"/>
+	</DynamicFamily>
+    
+    <ContentInstance>
+    	<ContentUnit id="labelMerchantID"/>
+    	<ContentUnit id="addressCountryName"/>
+    	<ContentUnit id="labelMerchantStoreHours"/>
+    	<ContentUnit id="titleAdditionalDetails"/>
+    	<ContentUnit id="labelAuthorisationCode"/>
+   		<ContentUnit id="labelTerminalID"/>
+    	<ContentUnit id="labelIssueNumber"/>
+		<ContentUnit id="labelApplicationID"/>
+		<ContentUnit id="labelApplicationPANSequenceNumber"/>
+		<ContentUnit id="labelCardStartDate"/>
+		<ContentUnit id="labelCardExpirationDate"/>
+		<ContentUnit id="labelItemLevelTax"/>
+		
+		<ContentUnit id="paymentTypeSale"/>
+		<ContentUnit id="paymentTypeRefund"/>
+		<ContentUnit id="paymentTypeCancelled"/>
+		<ContentUnit id="paymentTypeDeclined"/>
+		<ContentUnit id="paymentTypePartialRefund"/>
+		
+		<ContentUnit id="transactionSourceICC"/>
+		<ContentUnit id="transactionSourceSwiped"/>
+		<ContentUnit id="transactionSourceKeyed"/>
+		<ContentUnit id="transactionSourceContactless"/>
+	
+		<ContentUnit id="cardHolderInterfaceSignature"/>
+		<ContentUnit id="cardHolderInterfacePin"/>
+		<ContentUnit id="cardHolderInterfacePhoneOrMail"/>
+		
+		<ContentUnit id="ccTypeDiners"/>
+		<ContentUnit id="ccTypeSwitch"/>
+		<ContentUnit id="ccTypeSolo"/>
+		<ContentUnit id="ccTypeJCB"/>
+		<ContentUnit id="ccTypeCBNationale"/>
+		<ContentUnit id="ccTypeCetelem"/>
+		<ContentUnit id="ccTypeCofinoga"/>
+		<ContentUnit id="ccTypeCofidis"/>
+		<ContentUnit id="ccTypeStar"/>
+		<ContentUnit id="ccTypeBankcard"/>
+		<ContentUnit id="ccTypeMaestro"/>
+		<ContentUnit id="ccTypeBanorte"/>
+		<ContentUnit id="ccTypeBancomer"/>
+		<ContentUnit id="ccTypeSantander"/>
+		<ContentUnit id="ccTypeBanamex"/>
+		<ContentUnit id="ccTypeHSBC"/>
+		<ContentUnit id="ccTypeChinaUnionPay"/>
+    
+        <ContentUnit id="listViewTitle"/>
+        <ContentUnit id="browserTitle"/>
+        <ContentUnit id="tabDescription"/>
+        <ContentUnit id="tabTermsAndConditions"/>
+        <ContentUnit id="labelSubTotal"/>
+        <ContentUnit id="labelDiscount"/>
+        <ContentUnit id="labelTip"/>
+        <ContentUnit id="labelTotal"/>
+        <ContentUnit id="labelQuantity"/>
+        <ContentUnit id="textOrder"/>
+        <ContentUnit id="labelTransactionID"/>
+        <ContentUnit id="textPurchased"/>
+        <ContentUnit id="copyright"/>
+        <ContentUnit id="titlePaymentMethod"/>
+        <ContentUnit id="statusDraft"/>
+        <ContentUnit id="statusSent"/>
+        <ContentUnit id="statusCompleted"/>
+        <ContentUnit id="statusCancelled"/>
+        <ContentUnit id="statusViewed"/>
+        <ContentUnit id="statusRefunded"/>
+        <ContentUnit id="statusScheduled"/>
+        <ContentUnit id="titlePurchaseLocation"/>
+        <ContentUnit id="ppTermsAndConditions"/>
+        <ContentUnit id="paidWithCard"/>
+        <ContentUnit id="paidWithCash"/>
+        <ContentUnit id="paidWithCheck"/>
+        <ContentUnit id="paidWithPayPal"/>
+        <ContentUnit id="tax"/>
+        <ContentUnit id="ccTypeVisa"/>
+        <ContentUnit id="ccTypeMasterCard"/>
+        <ContentUnit id="ccTypeDiscover"/>
+        <ContentUnit id="ccTypeAmex"/>
+        <ContentUnit dynamicFamily="#ReceiptInfo" id="softDescriptor" nillable="false"/>
+        <ContentUnit dynamicFamily="#ReceiptInfo" id="combinedAddr" nillable="false"/>
+				
+    <ContentUnit id="titleBusinessInfo"/>
+    <ContentUnit id="titlePPtageline"/>
+		<ContentUnit id="titleRefundPolicy"/>
+		<ContentUnit id="titleReceiptIDNote"/>
+		<ContentUnit id="titleDescriptorMerchant"/>
+		<ContentUnit id="titleDescriptorConsumer"/>
+		<ContentUnit id="titleAppStoreLink"/>
+		<ContentUnit id="titleGooglePlayLink"/>
+		
+    </ContentInstance>
+</ContentContract>

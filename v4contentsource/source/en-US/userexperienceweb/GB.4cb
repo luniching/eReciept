@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentBundle instanceOf="userexperienceweb.GB" 
+            version="2.0"
+            xmlns="http://www.ebay.com/2006/v4/content" 
+            xmlns:its="http://www.w3.org/2005/11/its" 
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:schemaLocation="http://www.ebay.com/2006/v4/content ../../../schema/V4Content2.xsd">
+	<ContentElement id="labelMerchantID">Merchant ID:</ContentElement>
+	<ContentElement id="addressCountryName">UK</ContentElement>
+	<ContentElement id="labelMerchantStoreHours">Opening times</ContentElement>
+	<ContentElement id="titleAdditionalDetails">Additional Details</ContentElement>
+    <ContentElement id="labelAuthorisationCode">Authorisation code:</ContentElement>
+    <ContentElement id="labelTerminalID">Terminal ID:</ContentElement>
+    <ContentElement id="labelIssueNumber">Issue number:</ContentElement>
+	<ContentElement id="labelApplicationID">Application Identifier:</ContentElement>
+	<ContentElement id="labelApplicationPANSequenceNumber">Application PAN Sequence Number:</ContentElement>
+	<ContentElement id="labelCardStartDate">Start Date:</ContentElement>
+	<ContentElement id="labelCardExpirationDate">Expiry Date:</ContentElement>
+	
+	<ContentElement id="paymentTypeSale">SALE</ContentElement>
+	<ContentElement id="paymentTypeRefund">REFUND</ContentElement>
+	<ContentElement id="paymentTypeCancelled">CANCELLED SALE</ContentElement>
+	<ContentElement id="paymentTypeDeclined">DECLINED SALE</ContentElement>
+	<ContentElement id="paymentTypePartialRefund">PARTIAL REFUND</ContentElement>
+	
+	<ContentElement id="transactionSourceICC">ICC</ContentElement>
+	<ContentElement id="transactionSourceSwiped">Swiped</ContentElement>
+	<ContentElement id="transactionSourceKeyed">Keyed</ContentElement>
+	<ContentElement id="transactionSourceContactless">Contactless</ContentElement>
+	
+	<ContentElement id="cardHolderInterfaceSignature">Signature verified</ContentElement>
+	<ContentElement id="cardHolderInterfacePin">Pin verified</ContentElement>
+	<ContentElement id="cardHolderInterfacePhoneOrMail">Telephone order/Mail order</ContentElement>
+	
+	<ContentElement id="ccTypeDiners">Diners</ContentElement>
+	<ContentElement id="ccTypeSwitch">Maestro</ContentElement>
+	<ContentElement id="ccTypeSolo">Solo</ContentElement>
+	<ContentElement id="ccTypeJCB">JCB</ContentElement>
+	<ContentElement id="ccTypeCBNationale">Carte Bancaire</ContentElement>
+	<ContentElement id="ccTypeCetelem">Carte Aurore</ContentElement>
+	<ContentElement id="ccTypeCofinoga">Cofinoga</ContentElement>
+	<ContentElement id="ccTypeCofidis"></ContentElement>
+	<ContentElement id="ccTypeStar">STAR</ContentElement>
+	<ContentElement id="ccTypeBankcard"></ContentElement>
+	<ContentElement id="ccTypeMaestro">Maestro</ContentElement>
+	<ContentElement id="ccTypeBanorte">Banorte</ContentElement>
+	<ContentElement id="ccTypeBancomer">Bancomer</ContentElement>
+	<ContentElement id="ccTypeSantander">Santander</ContentElement>
+	<ContentElement id="ccTypeBanamex">Banamex</ContentElement>
+	<ContentElement id="ccTypeHSBC">HSBC</ContentElement>
+	<ContentElement id="ccTypeChinaUnionPay">UnionPay</ContentElement>
+	
+    <ContentElement id="listViewTitle">Saved offers</ContentElement>
+    <ContentElement id="browserTitle">PayPal</ContentElement>
+    <ContentElement id="tabDescription">Description</ContentElement>
+    <ContentElement id="tabTermsAndConditions">Terms &amp; Conditions</ContentElement>
+    <ContentElement id="labelSubTotal">Subtotal</ContentElement>
+    <ContentElement id="labelDiscount">Discount</ContentElement>
+    <ContentElement id="labelTip">Tip</ContentElement>
+    <ContentElement id="labelTotal">Total</ContentElement>
+    <ContentElement id="labelQuantity">X</ContentElement>
+    <ContentElement id="textOrder">Order ID:</ContentElement>
+    <ContentElement id="textPurchased">Created on</ContentElement>
+    <ContentElement id="titlePaymentMethod">Payment Method</ContentElement>
+    <ContentElement id="labelTransactionID">Transaction ID:</ContentElement>
+    <ContentElement id="copyright">Copyright &#169; 1999-2011 PayPal. All rights reserved.</ContentElement>
+    <ContentElement id="statusDraft">Draft</ContentElement>
+    <ContentElement id="statusSent">Sent</ContentElement>
+    <ContentElement id="statusCompleted">Completed</ContentElement>
+    <ContentElement id="statusCancelled">Cancelled</ContentElement>
+    <ContentElement id="statusViewed">Viewed</ContentElement>
+    <ContentElement id="statusRefunded">Refunded</ContentElement>
+    <ContentElement id="statusScheduled">Scheduled</ContentElement>
+    
+    <ContentElement id="titlePurchaseLocation">Purchase Location</ContentElement>
+    <ContentElement id="ppTermsAndConditions">&lt;p&gt;RIGHT TO REFUND&lt;/p&gt;&lt;p&gt;You, the customer, are entitled to a refund of the money to be transmitted as a result of this agreement if PayPal does not forward the money received from you within 10 days of the date of its receipt, or does not give instructions committing an equivalent amount of money to the person designated by you within 10 days of the date of the receipt of the funds from you unless otherwise instructed by you.&lt;/p&gt;&lt;p&gt;If your instructions as to when the money shall be forwarded or transmitted are not complied with, and the money has not yet been forwarded or transmitted, you have a right to a refund of your money.&lt;/p&gt;&lt;p&gt;If you want a refund, you must mail or deliver your written request to PayPal at P.O. Box 45950, Omaha, NE 68145-0950. If you do not receive your refund, you may be entitled to your money back plus a penalty of up to $1,000.00 USD and attorney's fees pursuant to Section 2102 of the California Financial Code.&lt;/p&gt;&lt;p&gt;PAYPAL ACCOUNT HOLDERS&lt;/p&gt;&lt;p&gt;If you have a PayPal account, you have a preferred alternative to the Right to Refund process. You may be covered if you find a payment error. You also may be covered if you did not receive your item or the item is significantly different from the seller’s description. To obtain help, log into your PayPal account and click Resolution Center at the top center of Account Overview.&lt;/p&gt;</ContentElement>
+    <ContentElement id="paidWithCard">Credit Card</ContentElement>
+    <ContentElement id="paidWithCash">Cash</ContentElement>
+    <ContentElement id="paidWithCheck">Check</ContentElement>
+    <ContentElement id="paidWithPayPal">PayPal</ContentElement>
+    <ContentElement id="tax">Tax</ContentElement>
+    <ContentElement id="labelItemLevelTax">Tax on</ContentElement>
+    <ContentElement id="ccTypeVisa">Visa/Delta/Electron</ContentElement>
+    <ContentElement id="ccTypeMasterCard">MasterCard/Eurocard</ContentElement>
+    <ContentElement id="ccTypeDiscover">Discover</ContentElement>
+    <ContentElement id="ccTypeAmex">American Express</ContentElement>
+	<ContentElement id="softDescriptor">This transaction will appear on your credit card statement as 'PAYPAL * <DPH id="merchantName"/>'</ContentElement>
+	<ContentElement id="combinedAddr"><DPH id="merchantAddress1"/>, <DPH id="merchantAddress2"/></ContentElement>
+  
+  <ContentElement id="titleBusinessInfo">Business Information</ContentElement>
+  <ContentElement id="titlePPtageline">Pay for anything using your phone</ContentElement>
+  <ContentElement id="titleRefundPolicy">Please retain your receipt as proof of transaction. If you change your mind about your purchase, you may return the product as sold within 14 days. Your statutory rights are not affected. The merchant may decide to increase this period.</ContentElement>
+  <ContentElement id="titleReceiptIDNote">The number above is the buyer's receipt ID for this transaction. Please retain it for your records so that you will be able to reference this transaction for customer service.</ContentElement>
+  <ContentElement id="titleDescriptorMerchant">You made a sale! You received a payment from <DPH id="cardHolderName"/></ContentElement>
+  <ContentElement id="titleDescriptorConsumer">Thanks for your business!</ContentElement>
+  <ContentElement id="titleAppStoreLink">Available on the App Store</ContentElement>
+  <ContentElement id="titleGooglePlayLink">Android app on Google Play</ContentElement>
+  
+</ContentBundle>

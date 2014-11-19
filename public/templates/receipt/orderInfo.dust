@@ -1,0 +1,78 @@
+{#data.viewModel}
+
+{@select key="{paymentInfoModel.paymentType}"}
+ <div class="totalPreDiv"><h1 id="amnt" class="{@eq value="SALE"}sale{/eq}{@eq value="REFUND"}refund{/eq}{@eq value="CANCELLED SALE"}cancelled{/eq}{@eq value="DECLINED SALE"}decline{/eq}{@eq value="PARTIAL REFUND"}partial{/eq}">{#invoiceModel}{totalAmount|s}{/invoiceModel}</h1>
+ </div>{/select}
+{#invoiceModel}
+				 <dl>
+            {#items}
+      		    <dt class='span item grouped'>
+                {@if cond="({quantity} > 1)"}
+                <span class="quantity">{quantity} {@content $key="content:labelQuantity"/}</span> {name}
+								{:else}
+								{name}
+								{/if}
+              </dt>
+              <dd class='span rght item grouped'>
+                {calculatedAmount|s}
+              </dd>
+            {/items}
+    		    
+              <dt class='span grouped first'>
+                {@content $key="content:labelSubTotal"/}
+              </dt>
+            	<dd class='span rght grouped first'>
+                {subTotal|s}
+            	</dd>
+            
+            {#taxes}
+              <dt class='span grouped'>
+                {label} <small>{percent}</small>
+              </dt>
+            	<dd class='span rght grouped'>
+                {taxAmount|s}
+            	</dd>
+            {/taxes}
+            
+            {?discountAmount}
+              <dt class='span grouped'>
+                {@content $key="content:labelDiscount"/}
+              </dt>
+              <dd class='span rght grouped'>
+                {discountAmount|s}
+              </dd>
+            {/discountAmount}
+            
+            {?tip}
+              <dt class='span grouped'>
+                {@content $key="content:labelTip"/}
+              </dt>
+              <dd class='span rght grouped'>
+                {tip|s}
+              </dd>
+            {/tip}
+            
+            <dt class='span last'>
+              {@content $key="content:labelTotal"/}
+            </dt>
+            <dd class='span rght last'>
+              {totalAmount|s}
+            </dd>
+             
+          </dl>
+          
+          {?sellerReceipt}
+          <aside class='receiptId'>
+				    <p><small>{@content $key="content:labelTransactionID"/} {transactionId}</small></p>
+						<p class="returnPolicy"><small >{@content $key="content:receiptIDNote"/}</small></p>
+          </aside>
+		      
+					{:else}
+          
+          <aside class='purchaseDate'>
+            <p><small>{!@content $key="content:textPurchased"/!} <time>{purchaseTimestamp}</time></small></p>
+            <p class="returnPolicy"><small >{@content $key="content:refundPolicy"/}</small></p>
+          </aside>
+					{/sellerReceipt}
+{/invoiceModel}
+{/data.viewModel} 

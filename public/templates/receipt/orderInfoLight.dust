@@ -1,0 +1,3 @@
+{#data.viewModel.invoiceModel} 
+ <h1><span class='amount paymentbig'>{totalAmount|s}</span></h1>
+{/data.viewModel.invoiceModel} 

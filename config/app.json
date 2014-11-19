@@ -1,0 +1,19 @@
+{
+    "port": 8000,
+    "monPort": 8001,
+    "paths": {
+        "resourceRoot": "public",
+        "staticRoot": ".build",
+        "viewPath": "public/templates",
+        "localeRoot": "v4contentsource/source",
+        "routeRoot": "mvc/controller"
+    },
+    "session" : {
+        "secret" : "receipts"
+    },
+   "basicAuth": {
+    "username": "paypal",
+    "password": "receipt"
+   },
+    "defaultFlow": "default"
+}

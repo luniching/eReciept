@@ -1,0 +1,26 @@
+{
+  "name": "ereceipts-design-refresh-prototype",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": "0.8.x"
+  },
+  "webcore": {
+    "version": "0.1.3"
+  },
+  "scripts": {
+    "start": "node ./registerTemplates.js; nodemon -e js,css,less,dust,json index.js"
+  },
+  "dependencies": {
+    "async": "0.1.x",
+    "express": "2.5.x",
+    "fs-extra": "0.6.1"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "bundledDependencies": [
+    "webcore"
+  ]
+}

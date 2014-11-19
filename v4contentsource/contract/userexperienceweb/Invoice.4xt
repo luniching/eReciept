@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentContractExtension>
+    <Specialize 
+        name="Country" 
+        default="US"
+        vector="com.paypal.web.infra.tags.specialization.dimension.CountryDimensionBinding" subset="US,AU,HK,JP,GB"/>        
+</ContentContractExtension>
+

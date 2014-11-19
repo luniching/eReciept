@@ -1,0 +1,52 @@
+{#data.viewModel.invoiceModel}
+
+  <section class='purchaselocation'>
+      <h2>{@content $key="content:titleBusinessInfo"/} - US-DEV</h2>
+      {#merchantModel}
+
+      <ul>
+        <li>{merchantName}</li>
+
+      {?merchantAccountNumber}
+        <li>{@content $key="content:labelMerchantID"/} {merchantAccountNumber}</li>
+      {/merchantAccountNumber}
+  
+      {?merchantAddress2}
+        <li>{@content $key="content:combinedAddr" merchantAddress1=merchantAddress1 merchantAddress2=merchantAddress2/}</li>
+      {:else}
+        <li>{merchantAddress1}</li>
+      {/merchantAddress2}
+
+      {@if cond="'{merchantState}'.length || '{merchantZip}'.length"}
+        <li>{merchantCity} {merchantState} {merchantZip}, {@content $key="content:addressCountryName"/}</li>
+      {:else}
+        <li>{merchantCity}, {@content $key="content:addressCountryName"/}</li>
+      {/if}
+
+      {@if cond="'{merchantPhone}'.length || '{merchantFax}'.length"}
+        <li>P: {merchantPhone}</li>
+        <li>F: {merchantFax}</li>
+      {/if}
+
+      {@if cond="'{merchantEmail}'.length || '{merchantWebsiteURL}'.length"}
+      {?merchantEmail}
+        <li><a href='mailto:{merchantEmail}'>{merchantEmail}</a></li>
+      {/merchantEmail}
+      
+      {?merchantWebsiteUrl}
+        <li><a href='{merchantWebsiteUrl}'>{merchantWebsiteUrl}</a></li>
+      {/merchantWebsiteUrl}
+      {/if}
+
+      </ul>
+  {/merchantModel}
+  </section>
+
+  <section class='map'>
+      <h2>{@content $key="content:titlePurchaseLocation"/} - US-DEV</h2>
+      {@if cond="'{latitude}'.length && '{longitude}'.length"}
+        <img src='http://maps.googleapis.com/maps/api/staticmap?center={latitude},{longitude}&amp;markers=color:red%7Clabel:A%7C{latitude},{longitude}&amp;zoom=12&amp;size=275x145&amp;sensor=false' alt='' />
+      {/if}
+  </section>
+
+{/data.viewModel.invoiceModel}

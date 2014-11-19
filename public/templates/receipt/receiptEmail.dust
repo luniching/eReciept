@@ -1,0 +1,84 @@
+{@useContent map="content=userexperienceweb.Invoice"}
+
+
+{>"inc/headerfooter" /}
+{<_title}{@content $key="content:browserTitle"/}{/_title}
+{<_main}
+    
+ {!sys.pageInfo.countryCode!}
+  
+ 
+ 
+{#data}
+    <div id='merchant'>
+      {#viewModel}
+	    {?sellerReceipt}
+        {#invoiceModel.merchantModel}
+                <p><small>{@content $key="content:receiptDescriptorMerchant"/}</small></p>
+        {/invoiceModel.merchantModel}
+			{:else}
+			
+  			{#invoiceModel.merchantModel}
+            {?merchantLogoUrl}
+              <img src='{links.imgBaseUrl}/{viewModel.invoiceModel.merchantModel.merchantLogoUrl}' alt=''/>
+            {/merchantLogoUrl}
+                <p><small>{@content $key="content:receiptDescriptorConsumer"/}</small></p>
+        {/invoiceModel.merchantModel}
+			{/sellerReceipt}
+      {/viewModel}
+{/data}	
+    </div>
+
+    
+      <div class='container-narrow'>
+        <div class='hero-unit'>
+					 {>"receipt/orderInfoLight"/}
+      <div class='row-fluid marketing'>
+  				<p class='receiptfrom'>{@content $key="content:receiptFrom"/}
+  				
+  				{?data.viewModel.sellerReceipt}
+  				  {data.viewModel.invoiceModel.merchantModel.merchantName} {! to do: buyer name? !}
+  				{:else}
+  				  {data.viewModel.invoiceModel.merchantModel.merchantName}
+  				{/data.viewModel.sellerReceipt}
+  				</p>
+          <p class='receiptlink'><a href='/partial'>{@content $key="content:emailLinkToFull"/}</a></p>
+          </div>
+        </div>
+      </div>
+  
+      {! todo: need content strings for these !}
+      <footer>
+        <h1 class='paypal'><a href='http://paypal.com'>PayPal</a></h1>
+				<p>{@content $key="content:titlePPtageline"/}</p>
+
+      {?data.viewModel.sellerReceipt}
+      <div class='hide'>
+			{:else}
+      <div>
+	    {/data.viewModel.sellerReceipt}
+        <aside class='appstore'><a href='https://itunes.apple.com/us/app/paypal/id283646709'>{@content $key="content:appStoreLink"/}</a></aside>
+        <aside class='googleplay'><a href='https://play.google.com/store/apps/details?id=com.paypal.android.p2pmobile&hl=en'>{@content $key="content:googlePlayLink"/}</a></aside>
+      </div>        
+        <div class='boilerplate'>
+          {!
+          <p><small>{@content $key="content:receiptId"/}{data.viewModel.invoiceModel.transactionId}</small></p>
+          !}
+          <p><small>{@content $key="content:emailIdConsumer"/}</small></p>
+        </div>
+      </footer>
+      
+      <script>
+      if (navigator.userAgent.match(/Android/i)) {
+        document.getElementsByClassName('appstore')[0].className = 'hide';
+      }
+      else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+        document.getElementsByClassName('googleplay')[0].className = 'hide';
+      }
+      </script>
+    
+  
+
+{/_main}
+
+{/useContent}

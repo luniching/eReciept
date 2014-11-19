@@ -1,0 +1,390 @@
+body {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+.hide {
+  display: none;
+}
+.merchantIntro {
+	background-color: #fff;
+	margin: 0 auto;
+	padding: 5px;
+	text-align: center;
+}
+header h1 {
+	display: inline;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1px;
+}
+h1 .paymentbig {
+  background-size: 17px 17px;
+  background-position-y: 6px;
+  background-repeat: no-repeat;
+  padding-left:20px;
+}
+#merchant h1 {
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 16px;
+	margin: 30px 5px 0 0;
+	color: #3d5266 !important;
+}
+#merchant {
+	font-size: 14px;
+	margin: 10px 0 15px 5px;
+	text-align: center;
+}
+.container-narrow {
+	margin: 0 10px;
+	max-width: 600px;
+}
+.hero-unit {
+	padding: 0;
+}
+.hero-unit .span {
+	box-sizing: border-box;
+	height: 45px !important;
+	moz-box-sizing: border-box;
+	webkit-box-sizing: border-box;
+}
+.hero-unit h1 {
+	padding: 5px 0px;
+	padding-bottom: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	display: inline-block;
+}
+.hero-unit dl {
+	margin: 10px 0;
+}
+.hero-unit dt, .hero-unit dd {
+	padding-top: 8px;
+}
+.hero-unit label {
+	font-size: 18px;
+	font-weight: bold;
+}
+.softDesc {
+	color: #9e9e9e;
+	font-size: 0.85em;
+	line-height: 16px !important;
+}
+.quantity {
+	color: #9e9e9e;
+	font-size: 0.9em;
+	line-height: 16px !important;
+	font-weight: normal;
+}
+aside {
+	margin: 10px;
+}
+.receiptId, .purchaseDate {
+  clear:both;
+	color: #9e9e9e;
+	font-size: .80em;
+	font-weight: bold;
+	line-height: normal;
+	padding: 15px 5px 15px 5px;
+	text-align: center;
+}
+.purchaseDate, p {
+  margin: 0;
+}
+.receiptId p {
+  margin: 0;
+}
+.receiptlink {
+  padding: 10px;
+  clear: both;
+  text-align: center;
+}
+.receiptlink a {
+  font-size: 60%;
+  font-weight: normal;
+  display: inline-block;
+  padding: 10px 30px;
+  line-height: 10px;
+  background-color: #5da3f3;
+  color: #fff;
+  border-radius: 3px;
+}
+.receiptfrom {
+  clear: both;
+  text-align: center;
+  font-size: 80%;
+  font-weight: normal;
+}
+.boilerplate {
+  border-top: 1px #d2dde8 solid;
+  color: #adbdcc;
+  margin: 10px;
+  padding-top: 10px;
+}
+.returnPolicy {
+	color: #9e9e9e;
+	display: inline;
+	font-weight: normal;
+	line-height: normal;
+	padding: 0 auto 5px auto;
+	text-align: center;
+}
+aside.ad {
+	margin: 0;
+}
+aside.ad img {
+	width: 100%;
+}
+.span.grouped {
+  font-size:85%;
+  border-bottom:0;
+  height:40px !important
+}
+.span.item.grouped {
+  font-size:100%;
+  height:25px !important;
+	padding-bottom: 10px;
+	padding-top: 0 !important;
+}
+.hero-unit .first {
+  border-top: 1px solid #ebf0f5;
+}
+.hero-unit .last {
+  border-top: 1px solid #ebf0f5;
+  border-bottom: 1px solid #ebf0f5 !important;
+  padding-top:10px;
+}
+
+.hero-unit .span {
+
+}
+
+/* Moved to receipt-images.css */
+/*
+ *.row-fluid.marketing {
+	padding-top: 20px;
+	background: #fafbfc url('../img/squiggle.png') top center no-repeat;
+}
+*/
+ *.row-fluid.marketing {
+	padding-top: 20px;
+	background-color: #fafbfc;
+	background-repeat: no-repeat;
+	background-position: top center;
+	border-radius: 0 0 6px 6px;
+}
+
+.marketing section {
+	display: block;
+	float: none;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0 auto;
+	/* width: 260px; */
+	width: 275px;
+}
+.marketing section h2 {
+	display: block;
+	font-size: 13px;
+	line-height: 20px;
+	margin: 0;
+	width: 100%;
+}
+.marketing ul {
+	list-style-type: none;
+}
+.marketing li {
+	line-height: 20px;
+}
+.marketing .map img {
+  margin: 5px 0 10px 0;
+	border: 1px solid #cfdae5;
+	border-radius: 5px;
+}
+.paymentmethod {
+	padding-left: 20px;
+}
+
+.paymentmethod h2 {
+  background-size: 18px 17px;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 17px;
+  padding-left: 20px;
+  background-position-y: 3px;
+  height: 22px;
+}
+.additionaldetails h2 {
+  background-size: 15px 17px;
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 17px;
+  padding-left: 20px;
+  background-position-y: 3px;
+  height: 22px;
+}
+.purchaselocation h2 {
+  background-size: 18px 16px;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 16px;
+  padding-left: 20px;
+  background-position-y: 3px;
+  height: 22px;
+}
+.map h2 {
+  background-size: 16px 18px;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 18px;
+  padding-left: 20px;
+  background-position-y: 3px;
+  height: 22px;
+}
+.purchaselocation {
+	clear: left;
+	padding-left: 20px;
+}
+footer {
+	display: block;
+}
+footer {
+	color: #3d5266;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 30px;
+	margin-top: 15px;
+	padding: 0;
+	text-align: center;
+	z-index: 10;
+}
+footer .buttons {
+	clear: both;
+	margin: 0 auto;
+	width: 320px;
+}
+footer .span6 {
+	margin-left: 0;
+	width: 150px;
+}
+footer .span6:first-child {
+	margin-right: 20px;
+}
+.totalPreDiv {
+	margin-left: 10px;
+	margin-right: 10px;
+	border-bottom: 1px solid #CFDAE5;
+	text-align: center;
+}
+#amnt {
+	background-size: 30px 30px;
+  background-repeat: no-repeat;
+	color: #ff0000;
+  padding-left: 30px;
+  background-position-y: 4px;
+	color: #6bb28f;
+}
+#payment {
+	background-size: 20px 20px;
+  background-repeat: no-repeat;
+	color: #ff0000;
+  padding-left: 25px;
+  background-position-y: 4px;
+	color: #6bb28f;
+}
+/*
+ *#payment.fail {
+	color: red !important;
+}
+*/
+#payment.refund, #amnt.refund {
+	color: #0f79bf !important;
+}
+#payment.cancelled, #amnt.cancelled   {
+	color: #cb0000 !important;
+}
+#payment.declined, #amnt.declined {
+	color: #cb0000 !important;
+}
+#payment.partial, #amnt.partial {
+	color: #0f79bf !important;
+}
+
+footer h1,
+footer aside {
+	display: inline-block;
+	margin: 5px auto;
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+	font-size: 1px;
+  line-height: 10px;
+}
+footer p {
+  padding:10px 0 0 0;
+  margin:0;
+  line-height: 0;
+}
+footer aside {
+  margin:25px 0 10px 0; padding:0;
+  line-height: 10px;
+}
+footer a {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+footer h1 {
+  margin: 0 auto;
+	background-size: 58px 15px;
+	width: 58px;
+	height: 15px;
+}
+footer aside {
+	background-size: 84px 27px;
+	height: 27px;
+	width: 84px;
+}
+
+/* high res only*/
+@media only screen and (min-width: 565px) {
+	.marketing {
+		/* margin: 10px; */
+	}
+	.marketing section {
+		float: left;
+		margin: 20px 0 0 0;
+	}
+	.marketing .additionaldetails {
+		float: right;
+		position: relative;
+		right: 20px;
+	}
+	.marketing .map {
+		float: right;
+		position: relative;
+		right: 20px;
+	}
+	.marketing .map p {
+		padding: 0;
+	}
+	/*.marketing .map img {
+		width: 260px;
+	}*/
+  .receiptlink, .receiptfrom {
+    position: relative;
+    left: -10px;
+  }
+}
+
+.fatalPage {
+	padding: 0 10px 10px 10px!important;
+	text-align: center !important;
+}
+
+/* wide screen only */
+@media only screen and (min-width: 620px) {
+	.container-narrow {
+		margin: 0 auto;
+	}
+}

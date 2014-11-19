@@ -1,0 +1,38 @@
+{@useContent map="content=userexperienceweb.Invoice"}
+
+{>"inc/headerfooter" /}
+{<_title}{@content $key="content:browserTitle"/}{/_title}
+{<_main}
+    
+    </div>
+     
+      <div class='container-narrow' style="margin-top: 25px">
+        <div class='hero-unit'>
+					 <h1>{!@content $key="content:labelFatal"/!} Receipt Details are Not Available</h1>
+
+      <div class='row-fluid marketing'>
+         <h5 class="fatalPage">{!@content $key="content:labelFatalSub"/!} Sorry, we can't show your receipt details right now. Try again later.</h5>
+          </div>
+        </div>
+      </div>
+		 
+      <footer>
+        <h1 class='paypal'><a href='http://paypal.com'>PayPal</a></h1>
+				<p>{@content $key="content:titlePPtageline"/}</p>
+        
+        <aside class='appstore'><a href='https://itunes.apple.com/us/app/paypal/id283646709'>{@content $key="content:appStoreLink"/}</a></aside>
+        <aside class='googleplay'><a href='https://play.google.com/store/apps/details?id=com.paypal.android.p2pmobile&hl=en'>{@content $key="content:googlePlayLink"/}</a></aside>
+      </footer>
+      
+      <script>
+      if (navigator.userAgent.match(/Android/i)) {
+        document.getElementsByClassName('appstore')[0].className = 'hide';
+      }
+      else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+        document.getElementsByClassName('googleplay')[0].className = 'hide';
+      }
+      </script>
+
+{/_main}
+
+{/useContent}

@@ -1,0 +1,5 @@
+{@useContent map="s=phylum.species"}
+
+What {@content $key="s:genus"/} are you, {data.viewModel.title}?
+
+{/useContent}

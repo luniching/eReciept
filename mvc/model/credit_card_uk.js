@@ -1,0 +1,151 @@
+module.exports = {
+
+    "data": {
+        "viewModel": {
+            "deviceType": "iphone",
+            "view": "receipt/receipt",
+            "osType": "mac",
+            "invoiceModel": {
+                "merchantAccountNumber": "**************09817",
+                "paymentType": "paypal",
+                "encryptedId": "INV2-8KCZ-JM7M-KV65-S6RC",
+                "merchantModel": {
+                    "merchantName": "mybusiness",
+                    "merchantAddress1": "address1",
+                    "merchantAddress2": "1857570AStreet",
+                    "merchantCity": "Wolverhampton",
+                    "merchantState": "WestMidlands",
+                    "merchantZip": "W124LQ",
+                    "merchantPhone": "446505635282",
+                    "merchantWebsiteUrl": "www.fool.com",
+                    "merchantEmail": "pphan-uk-b11@paypal.com"
+                },
+                "orderId": "0004",
+                "discountAmount": "-&pound;50.00",
+                "tip": "",
+                "totalAmount": "&pound;2,650.00 GBP",
+                "transactionId": "7HK88186WJ006312P",
+                "taxes": [
+                    {
+                        "taxAmount": "&pound;200.00",
+                        "taxValue": 20000,
+                        "encryptedId": "INV2-BYKB-GYPS-7GLF-GV73",
+                        "label": "Tax",
+                        "currencyCode": "GBP",
+                        "percent": "8%"
+                    }
+                ],
+                "longitude": -77.037852,
+                "latitude": 38.898556,
+                "payerId": "venkat1044@yahoo.com",
+                "paypalPayment": true,
+                
+                "purchaseTimestamp": "21-May-2013 17:41:39 o'clock BST",
+                "items": [
+                    {
+                        "name": "Guitar",
+                        "quantity": "5",
+                        "unitPrice": "&pound;500.00",
+                        "calculatedAmount": "&pound;2,500.00"
+                    }
+                ],
+                "subTotal": "&pound;2,500.00",
+                "status": "Completed"
+            },
+            "paymentInfoModel": {
+                "merchantAccountNumber": 1570899332143609900,
+                "paymentType": "SALE",
+                "authorizationCode": "123456",
+                "cardScheme": "VISA DEBIT",
+                "cardNumber": "************6066",
+                "cardExpirationDate": "11/15",
+                "applicationId": "A0000000031010",
+                "transactionSource": "ICC",
+                "successfulPayment": true,
+                "signatureVerified": true,
+                "pinPresent": false
+            },
+            "sellerReceipt": false
+        },
+        "links": {
+            "templateBaseUrl": "https://www.stage2pph11.qa.paypal.com/eboxapps/templates/b4/e73b32e0fcb876d074774724006bc",
+            "jsBaseUrl": "https://www.stage2pph11.qa.paypal.com/eboxapps/js/68/e4c0eb0616cef3a1022c5cf85875f6",
+            "hostUrl": "https://www.stage2pph11.qa.paypal.com",
+            "cssBaseUrl": "https://www.stage2pph11.qa.paypal.com/eboxapps/css/2e/9c5950c769c6f9418ba1836a2cce9d",
+            "requestURI": "/webapps/userexperienceweb/page/ireceipt/get"
+        }
+    },
+    "viewName": "receipt/receipt",
+    "sys": {
+        "tracking": {
+            "siteCatalyst": {
+                "jsFile": "https://www.stage2pph11.qa.paypal.com/js/site_catalyst/pp_jscode_paypaldev.js",
+                "propVars": [
+                    {
+                        "value": "userexperiencespartaweb\\x2FWEB-INF\\x2Ftmpl\\x2Fdust\\x2Freceipt\\x2Freceipt.dust",
+                        "prop": "s.prop1"
+                    },
+                    {
+                        "value": "9b68a64c57274",
+                        "prop": "s.prop40"
+                    },
+                    {
+                        "value": "en_GB",
+                        "prop": "s.prop50"
+                    },
+                    {
+                        "value": "aa16e9a5371fa24d0aca90b2233ac47b",
+                        "prop": "s.eVar61"
+                    },
+                    {
+                        "value": " ",
+                        "prop": "s.eVar62"
+                    },
+                    {
+                        "value": " ",
+                        "prop": "s.prop62"
+                    },
+                    {
+                        "value": "\\x7C\\x7C",
+                        "prop": "s.eVar66"
+                    },
+                    {
+                        "value": "Sparta",
+                        "prop": "s.prop71"
+                    },
+                    {
+                        "value": "unverified",
+                        "prop": "s.prop8"
+                    },
+                    {
+                        "value": "unrestricted",
+                        "prop": "s.prop9"
+                    },
+                    {
+                        "value": "testVarRemoveMe",
+                        "prop": "s.prop80"
+                    }
+                ],
+                "suiteVar": "devpaypalglobal"
+            },
+            "fpti": {
+                "jsURL": "https://www.stage2pph11.qa.paypal.com",
+                "dataString": "tmpl=userexperiencespartaweb%2FWEB-INF%2Ftmpl%2Fdust%2Freceipt%2Freceipt.dust&calc=9b68a64c57274&rsta=en_GB&md5h=aa16e9a5371fa24d0aca90b2233ac47b&shfp=%7C%7C&usce=+&pgtf=Sparta&s=ci&aver=unverified&rstr=unrestricted&pfid=9b68a64c57274",
+                "name": "pta",
+                "serverURL": "//tracking.qa.paypal.com/webapps/tracking/ts"
+            }
+        },
+        "pageInfo": {
+            "countryCode": "GB",
+            "hostName": "bBdpS978Yv7RGIQzPSzl%2BwAC3zjYO2gUip8RbOtZRd0OAVtMCYVTSlI1x7jATBuO",
+            "webVersion": "100-5962938",
+            "languageCode": "en",
+            "csrfToken": "NlxZLNKoJffK7LRpmXn0OwVE0jP2vR7aNyMcwj9EXGeTnFqEiXvWzQU0ZQF8RcAmFgpB-aVhiKiNzXKV6f98iEi2f-KZijW0f0FD0HI6TuIcpy_M",
+            "templateDate": "May 21, 2013 13:08:54 PDT",
+            "script": "sparta",
+            "rlogid": "6yyRF7Jt85GzWPgpNKPXmgJ4BWyCFsSDHuy%2BPrj2ETtrp7BQxQMUaTY5kmwkJuHXhD1vtZGKFR9Reb4aXVqndum9%2FgZNDPLWUh1tLGHYiFw_13ec8b57281",
+            "contentVersion": "major version: 1 minor version: 0"
+        }
+    }
+
+}

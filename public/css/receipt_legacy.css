@@ -1,0 +1,67 @@
+#merchant img {
+    border-radius: 10px 10px 10px 10px;
+    height: 150px;
+    max-height: 150px;
+    max-width: 150px;
+    width: 150px;
+		padding: 0 0 10px 0;
+}
+#merchant.uk img {
+    border-radius: 10px 10px 10px 10px;
+    height: 150px;
+    max-height: 150px;
+    max-width: 150px;
+    width: 150px;
+		padding: 0 0 10px 0;
+}
+#merchant .info {
+    color: white;
+    font-weight: normal;
+    margin: 0 0 10px;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+#merchant .phone {
+    color: #D67F3B;
+    font-weight: bold;
+    margin: 4px 0 0;
+    padding: 0 0 0 18px;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4);
+}
+#merchant .fax {
+    color: #D67F3B;
+    font-weight: bold;
+    margin: 4px 0 0;
+    padding: 0 0 0 18px;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4);
+}
+#merchant .web {
+    margin-top: 4px;
+}
+#merchant .email a, #merchant .url a {
+    color: #FFFFFF;
+    font-weight: normal;
+    margin: 4px 0 0;
+    padding: 0;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
+}
+#merchant h3 {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 5px 0 0;
+}
+#merchant .store-hours {
+    margin-top: 10px;
+}
+#merchant .store-hours .label {
+    color: black;
+    font-weight: bold;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+#merchant .store-hours ul li {
+    font-weight: normal;
+    padding-bottom: 0;
+    padding-top: 0;
+}

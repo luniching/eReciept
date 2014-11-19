@@ -1,0 +1,245 @@
+{@eq key=sys.pageInfo.countryCode value="US"}
+
+{#data.viewModel}
+{#paymentInfoModel}
+
+<section class='paymentmethod'>
+           <h2>{@content $key="content:titlePaymentMethod"/}</h2>
+					 
+											<ul>
+					 {?paymentType}{@select key="{paymentType}"}
+																 <li id="payment" class="{@eq value="SALE"}sale{/eq}{@eq value="REFUND"}refund{/eq}{@eq value="CANCELLED SALE"}cancelled{/eq}{@eq value="DECLINED SALE"}decline{/eq}{@eq value="PARTIAL REFUND"}partial{/eq}">{paymentType} {?transactionSource}({transactionSource}){/transactionSource}</li>
+					 {/select}{/paymentType}
+
+											{@if cond="'{buyerFirstName}'.length || '{buyerLastName}'.length"}
+																 <li>{buyerFirstName} {buyerLastName}</li>
+											{/if}
+											
+																 <li>{cardScheme} {cardNumber}</li>
+											
+					 {?sellerReceipt}
+											{?cardEffectiveDate}
+																 <li>{@content $key="content:labelCardStartDate"/} {cardEffectiveDate}</li>
+											{/cardEffectiveDate}
+											{?cardExpirationDate}
+																 <li>{@content $key="content:labelCardExpirationDate"/} {cardExpirationDate}</li>
+											{/cardExpirationDate}
+		       {/sellerReceipt}
+					 
+					 {@if cond="'{signatureVerified}'.length || '{pinPresent}'.length"}
+											{?signatureVerified}
+																 <li> {@content $key="content:cardHolderInterfaceSignature"/}</li>
+											{/signatureVerified}
+             
+											{?pinPresent}
+																 <li>{@content $key="content:cardHolderInterfacePin"/}</li>
+											{/pinPresent}
+					 {/if}
+					  
+					 {?successfulPayment}
+											{#invoiceModel}
+											{?transactionId}
+																 <li>{@content $key="content:labelTransactionID"/} {transactionId}</li>
+											{/transactionId}
+											
+											{?cardSoftDescription}
+																 <li class="softDesc">{@content $key="content:softDescriptor" merchantName=cardSoftDescription/}</li>
+											{/cardSoftDescription}
+											{/invoiceModel}
+					 {/successfulPayment}
+					  
+											</ul>
+</section>
+
+{:else}
+
+<section class='paymentmethod'>
+           <h2>{@content $key="content:titlePaymentMethod"/}</h2>
+						
+					 {#invoiceModel}
+											<ul>
+																 <li id="payment">{paymentType}</li>
+											{?cardHolderName}							
+																 <li>{cardHolderName}</li>
+											{/cardHolderName}
+					  
+											{?paypalPayment}
+											{@if cond="'{payerId}'.length"}
+																 <li>{payerId}</li>						  
+					  
+											{?transactionId}
+																 <li>{@content $key="content:labelTransactionID"/} {transactionId}</li>
+											{/transactionId} 
+											{/if}
+											{/paypalPayment}
+					    
+											{?status}
+																 <li>{status}</li>
+											{/status} 
+					  
+											{?cardSoftDescription}
+																 <li class="softDesc">{@content $key="content:softDescriptor" merchantName=softDescription/}</li>
+											{/cardSoftDescription}
+					  
+					 {/invoiceModel}
+											</ul>
+					 
+</section>
+{/paymentInfoModel}
+{/data.viewModel}
+
+{#data.viewModel}
+{#paymentInfoModel}
+<section class='additionaldetails'>
+					 
+					 {@if cond="'{authorizationCode}'.length || '{terminalId}'.length || '{applicationId}'.length || '{panSequenceNumber}'.length"}
+											<h2>{@content $key="content:titleAdditionalDetails"/}</h2>
+					 {/if}
+					  
+											<ul>
+											{?authorizationCode}
+																 <li>{@content $key="content:labelAuthorisationCode"/} {authorizationCode}</li>
+											{/authorizationCode}
+																 
+											{?terminalId}
+																 <li>{@content $key="content:labelTerminalID"/} {terminalId}</li>
+											{/terminalId}
+											
+											{?applicationId}
+																 <li>{@content $key="content:labelApplicationID"/} {applicationId}</li>
+											{/applicationId}
+											
+											{?panSequenceNumber}
+																 <li>{@content $key="content:labelApplicationPANSequenceNumber"/} {panSequenceNumber}</li>
+											{/panSequenceNumber}
+											</ul>
+																 				 
+</section>
+{/paymentInfoModel}
+{/data.viewModel}
+
+{:else} <!-------------------------------------------------- begin UK -------------------------------------------------->
+
+{#data.viewModel}
+{#paymentInfoModel}
+
+<section class='paymentmethod'>
+           <h2>{@content $key="content:titlePaymentMethod"/}</h2>
+					 
+											<ul>
+					 <!-- {?paymentType} <li id="payment" class="{^successfulPayment}fail{/successfulPayment}">{paymentType} {?transactionSource}({transactionSource}){/transactionSource}<div id="totalAmnt">{#invoiceModel}{!totalAmount|s!}{/invoiceModel}</div></li>
+					 {/paymentType} -->
+					 
+					 {?paymentType}{@select key="{paymentType}"}
+																 <li id="payment" class="{@eq value="SALE"}sale{/eq}{@eq value="REFUND"}refund{/eq}{@eq value="CANCELLED SALE"}cancelled{/eq}{@eq value="DECLINED SALE"}decline{/eq}{@eq value="PARTIAL REFUND"}partial{/eq}">{paymentType} {?transactionSource}({transactionSource}){/transactionSource}</li>
+					 {/select}{/paymentType} 
+
+											{@if cond="'{buyerFirstName}'.length || '{buyerLastName}'.length"}
+																 <li>{buyerFirstName} {buyerLastName}</li>
+											{/if}
+											
+																 <li>{cardScheme} {cardNumber}</li>
+											
+					 {?sellerReceipt}
+											{?cardEffectiveDate}
+																 <li>{@content $key="content:labelCardStartDate"/} {cardEffectiveDate}</li>
+											{/cardEffectiveDate}
+											{?cardExpirationDate}
+																 <li>{@content $key="content:labelCardExpirationDate"/} {cardExpirationDate}</li>
+											{/cardExpirationDate}
+		       {/sellerReceipt}
+					 
+					 {@if cond="'{signatureVerified}'.length || '{pinPresent}'.length"}
+											{?signatureVerified}
+																 <li> {@content $key="content:cardHolderInterfaceSignature"/}</li>
+											{/signatureVerified}
+             
+											{?pinPresent}
+																 <li>{@content $key="content:cardHolderInterfacePin"/}</li>
+											{/pinPresent}
+					 {/if}
+					 
+					 {?successfulPayment}
+											{#invoiceModel}
+											{?transactionId}
+																 <li>{@content $key="content:labelTransactionID"/} {transactionId}</li>
+											{/transactionId}
+											
+											{?cardSoftDescription}
+																 <li class="softDesc">{@content $key="content:softDescriptor" merchantName=cardSoftDescription/}</li>
+											{/cardSoftDescription}
+											{/invoiceModel}
+					 {/successfulPayment}
+
+											</ul>
+</section>
+
+{:else}						
+
+<section class='paymentmethod'>
+           <h2>{@content $key="content:titlePaymentMethod"/}</h2>
+						
+					 {#invoiceModel}
+											<ul>
+																 <li id="payment">{paymentType}</li>
+											{?cardHolderName}							
+																 <li>{cardHolderName}</li>
+											{/cardHolderName}
+    
+											{?paypalPayment}
+											{@if cond="'{payerId}'.length"}
+																 <li>{payerId}</li>						  
+
+											{?transactionId}
+																 <li>{@content $key="content:labelTransactionID"/} {transactionId}</li>
+											{/transactionId} 
+											{/if}
+											{/paypalPayment}
+    
+											{?status}
+																 <li>{status}</li>
+											{/status}
+    
+		
+											{?cardSoftDescription}
+																 <li class="softDesc">{@content $key="content:softDescriptor" merchantName=cardSoftDescription/}</li>
+											{/cardSoftDescription}
+
+					 {/invoiceModel}
+			 </ul>
+					 
+					 
+</section>
+{/paymentInfoModel}
+{/data.viewModel}
+
+{#data.viewModel}
+{#paymentInfoModel}
+<section class='additionaldetails'>
+					 
+					 {@if cond="'{authorizationCode}'.length || '{terminalId}'.length || '{applicationId}'.length || '{panSequenceNumber}'.length"}
+											<h2>{@content $key="content:titleAdditionalDetails"/}</h2>
+					 {/if}
+					 
+											<ul>
+																 <li>{@content $key="content:labelAuthorisationCode"/} {authorizationCode}</li>
+																 
+											{?terminalId}
+																 <li>{@content $key="content:labelTerminalID"/} {terminalId}</li>
+											{/terminalId}
+
+											{?applicationId}
+																 <li>{@content $key="content:labelApplicationID"/} {applicationId}</li>
+											{/applicationId}
+											
+											{?panSequenceNumber}
+																 <li>{@content $key="content:labelApplicationPANSequenceNumber"/} {panSequenceNumber}</li>
+											{/panSequenceNumber}
+											</ul>
+																 
+																 
+</section>
+{/paymentInfoModel}
+{/data.viewModel}
+
+{/eq}

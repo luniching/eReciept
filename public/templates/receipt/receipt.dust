@@ -1,0 +1,74 @@
+{@useContent map="content=userexperienceweb.Invoice"}
+
+{>"inc/headerfooter" /}
+{<_title}{@content $key="content:browserTitle"/}{/_title}
+{<_main}
+    
+ {!sys.pageInfo.countryCode!}
+  
+{#data.viewModel}
+     <div id='merchant'>
+				<h1>
+				{?sellerReceipt}
+						{#paymentInfoModel}
+								{@select key="{paymentType}"}
+								
+										{@eq value="SALE"}{@content $key="content:labelDescriptorMerchantSale"/} - MerchantSale{/eq}
+										{@eq value="REFUND"}{@content $key="content:labelDescriptorMerchantRefund"/} - MerchantRefund{/eq}
+										{@eq value="CANCELLED SALE"}{@content $key="content:labelDescriptorMerchantCancelled"/} - MerchantCancelled{/eq}
+										{@eq value="DECLINED SALE"}{@content $key="content:labelDescriptorMerchantDeclined"/} - MerchantDeclined{/eq}
+								
+							  {/select}
+						{/paymentInfoModel}
+				
+				{:else}
+				
+						{#paymentInfoModel}
+								{@select key="{paymentType}"}
+								
+										{@eq value="SALE"}{@content $key="content:labelDescriptorConsumerSale"/} - ConsumerSale{/eq}
+										{@eq value="REFUND"}{@content $key="content:labelDescriptorConsumerRefund"/} - ConsumerRefund{/eq}
+										{@eq value="CANCELLED SALE"}{@content $key="content:labelDescriptorConsumerCancelled"/} - ConsumerCancelled{/eq}
+										{@eq value="DECLINED SALE"}{@content $key="content:labelDescriptorConsumerDeclined"/} - ConsumerDeclined{/eq}
+								
+							  {/select}
+						{/paymentInfoModel}
+						
+				{/sellerReceipt}
+				</h1>
+		 </div>
+{/data.viewModel}
+
+    </div>
+     
+      <div class='container-narrow'>
+        <div class='hero-unit'>
+					 {>"receipt/orderInfo"/}
+      <div class='row-fluid marketing'>
+					 {>"receipt/paymentInfo" countryCode=sys.pageInfo.countryCode/}
+					 {>"receipt/merchantInfo" countryCode=sys.pageInfo.countryCode/}
+          </div>
+        </div>
+      </div>
+		 
+      {! todo: need content strings for these !}
+      <footer>
+        <h1 class='paypal'><a href='http://paypal.com'>PayPal</a></h1>
+				<p>{@content $key="content:titlePPtageline"/}</p>
+        
+        <aside class='appstore'><a href='https://itunes.apple.com/us/app/paypal/id283646709'>{@content $key="content:labelAppStoreLink"/}</a></aside>
+        <aside class='googleplay'><a href='https://play.google.com/store/apps/details?id=com.paypal.android.p2pmobile&hl=en'>{@content $key="content:labelGooglePlayLink"/}</a></aside>
+      </footer>
+      
+      <script>
+      if (navigator.userAgent.match(/Android/i)) {
+        document.getElementsByClassName('appstore')[0].className = 'hide';
+      }
+      else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+        document.getElementsByClassName('googleplay')[0].className = 'hide';
+      }
+      </script>
+
+{/_main}
+
+{/useContent}

@@ -1,0 +1,24 @@
+{
+  ".DS_Store": true,
+  "content.dust": true,
+  "inc": {
+    "headerfooter.dust": true,
+    "master.dust": true,
+    "master_wrk.dust": true
+  },
+  "index.dust": true,
+  "receipt": {
+    "fatal.dust": true,
+    "fatal.html": true,
+    "merchantInfo-us-dev.dust": true,
+    "merchantInfo-us.dust": true,
+    "merchantInfo.dust": true,
+    "orderInfo.dust": true,
+    "orderInfoLight.dust": true,
+    "paymentInfo-us-dev.dust": true,
+    "paymentInfo-us.dust": true,
+    "paymentInfo.dust": true,
+    "receipt.dust": true,
+    "receiptEmail.dust": true
+  }
+}
